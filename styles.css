@@ -14,7 +14,8 @@
     /* Fundo limpo para contraste */
     --text-color: #000000;
     /* Preto para leitura */
-    --whatsapp-color: #25D366;
+    --whatsapp-color: #128C7E;
+    /* Verde Escuro Oficial do WhatsApp para Alto Contraste */
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -86,7 +87,7 @@ a {
 }
 
 .sticky-bar a:hover {
-    background: #1ebe56;
+    background: #075E54;
     transform: translateY(-2px);
 }
 
@@ -779,7 +780,7 @@ a {
 
 .floating-whatsapp:hover {
     transform: scale(1.08);
-    background-color: #1ebe56;
+    background-color: #075E54;
 }
 
 /* Mobile Adjustments */

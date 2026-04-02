@@ -33,8 +33,8 @@
         rel="stylesheet">
 
     <!-- Optimization / Preloads -->
-    <link rel="preload" as="image" href="loja.jpg">
-    <link rel="preload" as="image" href="logo.png">
+    <link rel="preload" as="image" href="loja.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="logo.png" fetchpriority="high">
 
     <!-- Phosphor Icons -->
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -78,8 +78,8 @@
     <div class="sticky-bar">
         <span>Encomendas para este fim de semana!</span>
         <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20fazer%20uma%20encomenda%20para%20este%20fim%20de%20semana."
-            target="_blank" rel="noopener noreferrer">
-            <i class="ph-fill ph-whatsapp-logo"></i> Garanta a sua agora
+            target="_blank" rel="noopener noreferrer" aria-label="Fazer Encomenda no WhatsApp">
+            <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i> Garanta a sua agora
         </a>
     </div>
 
@@ -87,14 +87,15 @@
     <main>
         <header class="hero">
             <div class="hero-content">
-                <img src="logo.png" alt="Mari Quitutes Logo" class="hero-logo">
+                <img src="logo.png" alt="Mari Quitutes Logo" class="hero-logo" fetchpriority="high">
                 <h1>Bolos Personalizados Artesanais entregues em São Paulo em até 24h</h1>
                 <p>Bolos, Doces e Salgados feitos com ingredientes selecionados, para festas, eventos e momentos
                     especiais.
                     15 anos de história e amor em cada fatia.</p>
                 <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Gostaria%20de%20pedir%20um%20orçamento%20gratuito."
-                    class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                    <i class="ph-fill ph-whatsapp-logo"></i> Pedir Orçamento Grátis Agora
+                    class="btn-whatsapp" target="_blank" rel="noopener noreferrer"
+                    aria-label="Pedir Orçamento Grátis via WhatsApp">
+                    <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i> Pedir Orçamento Grátis Agora
                 </a>
             </div>
         </header>
@@ -113,13 +114,13 @@
                 <!-- Card 1 -->
                 <div class="product-card">
                     <div class="carousel" data-folder="bolos">
-                        <button class="carousel-btn prev" aria-label="Anterior"><i
-                                class="ph ph-caret-left"></i></button>
+                        <button class="carousel-btn prev" aria-label="Anterior"><i class="ph ph-caret-left"
+                                aria-hidden="true"></i></button>
                         <div class="carousel-track-container">
                             <div class="carousel-track"></div>
                         </div>
-                        <button class="carousel-btn next" aria-label="Próximo"><i
-                                class="ph ph-caret-right"></i></button>
+                        <button class="carousel-btn next" aria-label="Próximo"><i class="ph ph-caret-right"
+                                aria-hidden="true"></i></button>
                         <div class="carousel-dots"></div>
                     </div>
                     <div class="product-info">
@@ -129,7 +130,7 @@
                             cada detalhe fazem a diferença</p>
                         <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20um%20orçamento%20para%20bolo%20doce%20personalizado."
                             class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                            Quero meu bolo personalizado <i class="ph ph-arrow-right"></i>
+                            Quero meu bolo personalizado <i class="ph ph-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -137,13 +138,13 @@
                 <!-- Card 2 -->
                 <div class="product-card">
                     <div class="carousel" data-folder="doces">
-                        <button class="carousel-btn prev" aria-label="Anterior"><i
-                                class="ph ph-caret-left"></i></button>
+                        <button class="carousel-btn prev" aria-label="Anterior"><i class="ph ph-caret-left"
+                                aria-hidden="true"></i></button>
                         <div class="carousel-track-container">
                             <div class="carousel-track"></div>
                         </div>
-                        <button class="carousel-btn next" aria-label="Próximo"><i
-                                class="ph ph-caret-right"></i></button>
+                        <button class="carousel-btn next" aria-label="Próximo"><i class="ph ph-caret-right"
+                                aria-hidden="true"></i></button>
                         <div class="carousel-dots"></div>
                     </div>
                     <div class="product-info">
@@ -153,7 +154,7 @@
                             aniversários, casamentos e celebrações únicas.</p>
                         <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20um%20orçamento%20para%20doces%20e%20salgados%20para%20festa."
                             class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                            Quero doces personalizados <i class="ph ph-arrow-right"></i>
+                            Quero doces personalizados <i class="ph ph-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -162,13 +163,13 @@
                 <!-- Card 3 -->
                 <div class="product-card">
                     <div class="carousel" data-folder="salgados">
-                        <button class="carousel-btn prev" aria-label="Anterior"><i
-                                class="ph ph-caret-left"></i></button>
+                        <button class="carousel-btn prev" aria-label="Anterior"><i class="ph ph-caret-left"
+                                aria-hidden="true"></i></button>
                         <div class="carousel-track-container">
                             <div class="carousel-track"></div>
                         </div>
-                        <button class="carousel-btn next" aria-label="Próximo"><i
-                                class="ph ph-caret-right"></i></button>
+                        <button class="carousel-btn next" aria-label="Próximo"><i class="ph ph-caret-right"
+                                aria-hidden="true"></i></button>
                         <div class="carousel-dots"></div>
                     </div>
                     <div class="product-info">
@@ -178,7 +179,7 @@
                             sofisticadas.</p>
                         <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20um%20orçamento%20para%20bolo%20salgado%20personalizado."
                             class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                            Quero meus salgados <i class="ph ph-arrow-right"></i>
+                            Quero meus salgados <i class="ph ph-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -195,8 +196,10 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star"
+                            aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i
+                            class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star"
+                            aria-hidden="true"></i>
                     </div>
                     <p>"A Mari fez o bolo da minha filha e todos os convidados pediram o contato dela. Sabor incrível e
                         entrega no horário!"</p>
@@ -207,8 +210,10 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star"
+                            aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i
+                            class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star"
+                            aria-hidden="true"></i>
                     </div>
                     <p>"O bolo salgado foi a sensação da nossa festa. Recheio generoso e massa perfeita. Recomendo de
                         olhos
@@ -220,8 +225,10 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                            class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star"
+                            aria-hidden="true"></i><i class="ph-fill ph-star" aria-hidden="true"></i><i
+                            class="ph-fill ph-star" aria-hidden="true"></i><i class="ph-fill ph-star"
+                            aria-hidden="true"></i>
                     </div>
                     <p>"Tudo muito bem embalado e fresco! Os salgadinhos são divinos e os doces desmancham na boca.
                         Atendimento rápido."</p>
@@ -235,7 +242,8 @@
             <div class="text-center">
                 <a href="https://share.google/XepgnYkadOLFDQeUs" target="_blank" rel="noopener noreferrer"
                     class="btn-google">
-                    <i class="ph-fill ph-google-logo" style="color: #4285F4; font-size: 1.4rem;"></i> Ver todas as
+                    <i class="ph-fill ph-google-logo" style="color: #4285F4; font-size: 1.4rem;" aria-hidden="true"></i>
+                    Ver todas as
                     avaliações no Google
                 </a>
             </div>
@@ -260,7 +268,7 @@
                     localizados na Vila Dalva e somos especialistas em entregar sabor e confiança.</p><br>
                 <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Gostaria%20de%20saber%20mais%20sobre%20o%20trabalho%20de%20vocês."
                     class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                    Converse com a Mari <i class="ph ph-arrow-right"></i>
+                    Converse com a Mari <i class="ph ph-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
         </section>
@@ -272,7 +280,7 @@
             <div class="accordion-item">
                 <div class="accordion-header">
                     Como faço para encomendar bolos ou doces personalizados?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                 </div>
                 <div class="accordion-content">
                     <p>É simples! Basta entrar em contato diretamente com a Mari pelo WhatsApp (11) 99535-7319 para
@@ -284,7 +292,7 @@
             <div class="accordion-item">
                 <div class="accordion-header">
                     Vocês entregam em São Paulo? Qual o prazo?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                 </div>
                 <div class="accordion-content">
                     <p>Sim! A Mari Quitutes atende toda São Paulo e você pode receber seus produtos em até 24 horas.
@@ -295,7 +303,7 @@
             <div class="accordion-item">
                 <div class="accordion-header">
                     Os produtos são feitos artesanalmente?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                 </div>
                 <div class="accordion-content">
                     <p>Com certeza! Todos os bolos, doces e salgados são preparados de forma artesanal, diariamente, com
@@ -306,7 +314,7 @@
             <div class="accordion-item">
                 <div class="accordion-header">
                     Com quanto tempo de antecedência devo fazer meu pedido?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                 </div>
                 <div class="accordion-content">
                     <p>Para garantir a disponibilidade e a personalização do seu produto, recomendamos entrar em contato
@@ -318,7 +326,7 @@
             <div class="accordion-item">
                 <div class="accordion-header">
                     Vocês fazem salgados para festas e eventos maiores?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                 </div>
                 <div class="accordion-content">
                     <p>Sim! A Mari Quitutes oferece salgados artesanais perfeitos para festas, eventos corporativos e
@@ -334,8 +342,9 @@
             <p>Solicite seu orçamento gratuito agora pelo WhatsApp. Respondemos em minutos!</p>
             <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Estou%20pronta(o)%20para%20fazer%20meu%20pedido.%20Como%20funciona?"
                 class="btn-whatsapp" style="font-size: 1.2rem; padding: 18px 40px;" target="_blank"
-                rel="noopener noreferrer">
-                <i class="ph-fill ph-whatsapp-logo" style="font-size: 1.5rem;"></i> Falar com a Mari no WhatsApp
+                rel="noopener noreferrer" aria-label="Falar com a Mari no WhatsApp">
+                <i class="ph-fill ph-whatsapp-logo" style="font-size: 1.5rem;" aria-hidden="true"></i> Falar com a Mari
+                no WhatsApp
             </a>
         </section>
 
@@ -389,7 +398,7 @@
     <!-- Botão Fixo Mobile -->
     <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
         class="floating-whatsapp" aria-label="Falar no WhatsApp" target="_blank" rel="noopener noreferrer">
-        <i class="ph-fill ph-whatsapp-logo"></i>
+        <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>
     </a>
 
     <!-- Scripts -->
