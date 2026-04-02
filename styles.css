@@ -12,8 +12,8 @@
     /* Preto do texto do Logo */
     --bg-color: #FFFFFF;
     /* Fundo limpo para contraste */
-    --text-color: #231F20;
-    /* Quase preto para leitura */
+    --text-color: #000000;
+    /* Preto para leitura */
     --whatsapp-color: #25D366;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -344,7 +344,7 @@ a {
 }
 
 .product-info p {
-    color: #666;
+    color: #000000;
     margin-bottom: 25px;
     font-size: 1rem;
     line-height: 1.5;
@@ -472,7 +472,7 @@ a {
     font-size: 1.15rem;
     line-height: 1.8;
     margin-bottom: 25px;
-    color: #444;
+    color: #000000;
 }
 
 .about-text .btn-whatsapp {
@@ -532,7 +532,7 @@ a {
 }
 
 .location-content p {
-    color: #555;
+    color: #000000;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 25px;
@@ -651,7 +651,7 @@ a {
 }
 
 .accordion-content p {
-    color: #555;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -688,7 +688,7 @@ a {
 /* Footer */
 .footer {
     background-color: #FAFAFA;
-    color: #444;
+    color: #000000;
     padding: 60px 20px 25px;
     text-align: center;
     border-top: 1px solid #EEEEEE;
@@ -718,7 +718,7 @@ a {
 
 .footer p {
     font-size: 0.95rem;
-    color: #666;
+    color: #000000;
 }
 
 .social-links {
@@ -753,7 +753,7 @@ a {
     border-top: 1px solid #DDD;
     padding-top: 25px;
     font-size: 0.85rem;
-    color: #888;
+    color: #000000;
 }
 
 /* Floating WhatsApp Mobile */
