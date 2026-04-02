@@ -1,0 +1,802 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FBCCD0;
+    /* Rosa mais claro a pedido do cliente */
+    --secondary-color: #000000;
+    /* Preto do texto do Logo */
+    --bg-color: #FFFFFF;
+    /* Fundo limpo para contraste */
+    --text-color: #231F20;
+    /* Quase preto para leitura */
+    --whatsapp-color: #25D366;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body {
+    /* overflow-x removido para permitir que position: sticky funcione */
+    background-color: var(--bg-color);
+}
+
+/* Typography Utilities */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Sticky Urgency Bar */
+.sticky-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    /* Alterado para contraste legível sobre rosa choque */
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.sticky-bar a {
+    text-decoration: none;
+    font-weight: 700;
+    background: var(--whatsapp-color);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.sticky-bar a:hover {
+    background: #1ebe56;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 80px 20px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('place/loja.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    z-index: 2;
+}
+
+.hero-logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 25px rgba(0, 0, 0, 0.6));
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 25px;
+    line-height: 1.15;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin-inline: auto;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Buttons */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--whatsapp-color);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+.btn-google {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    color: var(--secondary-color);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.btn-google:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Trust Section */
+.trust-section {
+    background-color: white;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: -40px auto 50px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    z-index: 3;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.trust-item i {
+    color: var(--primary-color);
+    /* Rosa logo */
+    font-size: 1.8rem;
+}
+
+/* Products Section */
+.products {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== CAROUSEL STYLES ================== */
+.carousel {
+    position: relative;
+    height: 380px;
+    /* Fotos bem mais altas e imponentes */
+    width: 100%;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.carousel-track-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-track img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s, color 0.3s;
+    color: var(--secondary-color);
+    /* Preto p/ destaque visível */
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background: var(--primary-color);
+    transform: scale(1.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================================== */
+
+.product-info {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    color: var(--secondary-color);
+    /* Preto do Logo */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.product-card .btn-whatsapp {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 20px;
+}
+
+/* Social Proof (Testimonials) */
+.social-proof {
+    background-color: var(--primary-color);
+    /* Fundo Rosa F8ABAD */
+    color: var(--text-color);
+    /* Texto escuro pois o fundo é rosa claro */
+    padding: 80px 20px;
+}
+
+.social-proof h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.stars {
+    color: #FFC107;
+    /* Amarelo/Dourado estilo Google */
+    margin-bottom: 18px;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    /* Um leve sombreado para realce no fundo claro */
+}
+
+.testimonial-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* About Section */
+.about {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-img {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 380px; /* Controla o tamanho para não ficar gigante */
+    aspect-ratio: 4 / 5; /* Formato retrato harmonioso na proporção 4:5 */
+    object-fit: cover; /* Evita achatamento, recorta gentilmente o excesso */
+    object-position: top center; /* Garante que o rosto e o bolo apareçam */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 6px solid var(--primary-color);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 2.7rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.about-text .btn-whatsapp {
+    margin: 15px auto 0; /* Centraliza horizontalmente e adiciona margem no topo */
+    display: flex;
+    width: fit-content; /* O botão só ocupa o espaço do texto dele */
+}
+
+/* Location Section */
+.location-section {
+    background-color: #FAFAFA;
+    padding: 80px 20px;
+}
+
+.location-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap; /* Para ficar embaixo no mobile */
+}
+
+.location-content {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #EFEFEF;
+}
+
+.location-icon {
+    width: 75px;
+    height: 75px;
+    background-color: var(--whatsapp-color); /* Verde da marca */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.location-content h2 {
+    color: var(--secondary-color);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.location-content p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.location-content address {
+    font-style: normal;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    background-color: #f6fdf8; /* Levíssimo fundo verde */
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.btn-location {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    color: var(--whatsapp-color); /* Texto Verde */
+    border: 2px solid var(--whatsapp-color); /* Borda Verde */
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-location:hover {
+    background-color: var(--whatsapp-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.location-img {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.location-img.gallery-circle img {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 15px 40px rgba(248, 171, 173, 0.3);
+    border: 8px solid var(--primary-color);
+}
+
+/* FAQ Section */
+.faq {
+    padding: 80px 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 45px;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.accordion-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+}
+
+.accordion-header {
+    padding: 22px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    user-select: none;
+}
+
+.accordion-header i {
+    transition: transform 0.3s;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.accordion-item.active .accordion-header i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    padding: 0 25px;
+    background: #fafaf5;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 0 25px 25px;
+    max-height: 800px;
+}
+
+.accordion-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Final CTA */
+.final-cta {
+    background-color: var(--primary-color);
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.final-cta h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.final-cta p {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.final-cta .btn-whatsapp {
+    background-color: var(--whatsapp-color);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.final-cta .btn-whatsapp:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #FAFAFA;
+    color: #444;
+    padding: 60px 20px 25px;
+    text-align: center;
+    border-top: 1px solid #EEEEEE;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    max-width: 180px;
+    margin-bottom: 5px;
+}
+
+.footer h3 {
+    color: var(--secondary-color);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Permite que os links quebrem linha no mobile, evitando overflow */
+    margin-top: 15px;
+    font-size: 1.05rem;
+    /* Letras em tamanho de leitura */
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.social-links i {
+    font-size: 1.8rem;
+    /* Ícones em tamanho grande */
+    margin-right: 6px;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    border-top: 1px solid #DDD;
+    padding-top: 25px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Floating WhatsApp Mobile */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    /* Revertido para a DIREITA conforme solicitação */
+    z-index: 9999;
+    background-color: var(--whatsapp-color);
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.08);
+    background-color: #1ebe56;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        height: 300px;
+        /* No celular, a foto diminui um pouquinho na altura para não cobrir a tela inteira */
+    }
+
+    .trust-section {
+        margin: 0 auto;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding-top: 40px;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .final-cta h2 {
+        font-size: 2rem;
+    }
+}
