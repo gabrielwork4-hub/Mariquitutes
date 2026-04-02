@@ -37,8 +37,7 @@
     <link rel="preload" as="image" href="loja.jpg" fetchpriority="high">
     <link rel="preload" as="image" href="logo.png" fetchpriority="high">
 
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- O Script PhosphorIcons foi movido para o final da página para remover a penalidade de 800ms de Render Blocking -->
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -88,7 +87,8 @@
     <main>
         <header class="hero">
             <div class="hero-content">
-                <img src="logo.png" alt="Mari Quitutes Logo" class="hero-logo" fetchpriority="high">
+                <img src="logo.png" alt="Mari Quitutes Logo" class="hero-logo" width="180" height="180"
+                    fetchpriority="high">
                 <h1>Bolos Personalizados Artesanais entregues em São Paulo em até 24h</h1>
                 <p>Bolos, Doces e Salgados feitos com ingredientes selecionados, para festas, eventos e momentos
                     especiais.
@@ -372,7 +372,7 @@
                 </div>
                 <div class="location-img gallery-circle">
                     <img src="loja.jpg" alt="Fachada da loja física Mari Quitutes localizada em São Paulo"
-                        loading="lazy" decoding="async">
+                        loading="lazy" width="450" height="450" decoding="async">
                 </div>
             </div>
         </section>
@@ -381,7 +381,8 @@
     <!-- 9. Rodapé -->
     <footer class="footer">
         <div class="footer-content">
-            <img src="logo.png" alt="Mari Quitutes Logo" class="footer-logo" loading="lazy" decoding="async">
+            <img src="logo.png" alt="Mari Quitutes Logo" class="footer-logo" loading="lazy" width="180" height="180"
+                decoding="async">
             <p>R. José do Patrocínio Waetge, 62 — Vila Dalva, São Paulo - SP</p>
             <p>Telefone: <a href="tel:+5511995357319">(11) 99535-7319</a></p>
             <div class="social-links">
@@ -402,7 +403,8 @@
         <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>
     </a>
 
-    <!-- Scripts -->
+    <!-- Phosphor Icons Script no Rodapé para zerar Render Blocking -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script defer src="script.js"></script>
 </body>
 
