@@ -93,12 +93,12 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    padding: 80px 20px;
-    min-height: 80vh;
+    padding: 60px 20px;
+    min-height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('place/loja.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('loja.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -444,10 +444,14 @@ a {
 
 .about-img img {
     width: 100%;
-    max-width: 380px; /* Controla o tamanho para não ficar gigante */
-    aspect-ratio: 4 / 5; /* Formato retrato harmonioso na proporção 4:5 */
-    object-fit: cover; /* Evita achatamento, recorta gentilmente o excesso */
-    object-position: top center; /* Garante que o rosto e o bolo apareçam */
+    max-width: 380px;
+    /* Controla o tamanho para não ficar gigante */
+    aspect-ratio: 4 / 5;
+    /* Formato retrato harmonioso na proporção 4:5 */
+    object-fit: cover;
+    /* Evita achatamento, recorta gentilmente o excesso */
+    object-position: top center;
+    /* Garante que o rosto e o bolo apareçam */
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     border: 6px solid var(--primary-color);
@@ -472,9 +476,11 @@ a {
 }
 
 .about-text .btn-whatsapp {
-    margin: 15px auto 0; /* Centraliza horizontalmente e adiciona margem no topo */
+    margin: 15px auto 0;
+    /* Centraliza horizontalmente e adiciona margem no topo */
     display: flex;
-    width: fit-content; /* O botão só ocupa o espaço do texto dele */
+    width: fit-content;
+    /* O botão só ocupa o espaço do texto dele */
 }
 
 /* Location Section */
@@ -489,7 +495,8 @@ a {
     display: flex;
     align-items: center;
     gap: 60px;
-    flex-wrap: wrap; /* Para ficar embaixo no mobile */
+    flex-wrap: wrap;
+    /* Para ficar embaixo no mobile */
 }
 
 .location-content {
@@ -506,7 +513,8 @@ a {
 .location-icon {
     width: 75px;
     height: 75px;
-    background-color: var(--whatsapp-color); /* Verde da marca */
+    background-color: var(--whatsapp-color);
+    /* Verde da marca */
     color: white;
     border-radius: 50%;
     display: flex;
@@ -536,7 +544,8 @@ a {
     font-size: 1.05rem;
     line-height: 1.7;
     margin-bottom: 35px;
-    background-color: #f6fdf8; /* Levíssimo fundo verde */
+    background-color: #f6fdf8;
+    /* Levíssimo fundo verde */
     padding: 20px;
     border-radius: 12px;
     border: 1px solid rgba(37, 211, 102, 0.2);
@@ -548,8 +557,10 @@ a {
     justify-content: center;
     gap: 10px;
     background-color: white;
-    color: var(--whatsapp-color); /* Texto Verde */
-    border: 2px solid var(--whatsapp-color); /* Borda Verde */
+    color: var(--whatsapp-color);
+    /* Texto Verde */
+    border: 2px solid var(--whatsapp-color);
+    /* Borda Verde */
     padding: 14px 28px;
     border-radius: 50px;
     font-size: 1.05rem;
@@ -786,7 +797,7 @@ a {
     }
 
     .hero {
-        min-height: 70vh;
+        min-height: 55vh;
         padding-top: 40px;
     }
 

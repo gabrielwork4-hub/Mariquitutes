@@ -32,8 +32,12 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
 
+    <!-- Optimization / Preloads -->
+    <link rel="preload" as="image" href="loja.jpg">
+    <link rel="preload" as="image" href="logo.png">
+
     <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -73,8 +77,8 @@
     <!-- 1. Barra de Urgência -->
     <div class="sticky-bar">
         <span>Encomendas para este fim de semana!</span>
-        <a
-            href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20fazer%20uma%20encomenda%20para%20este%20fim%20de%20semana.">
+        <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20fazer%20uma%20encomenda%20para%20este%20fim%20de%20semana."
+            target="_blank" rel="noopener noreferrer">
             <i class="ph-fill ph-whatsapp-logo"></i> Garanta a sua agora
         </a>
     </div>
@@ -89,7 +93,7 @@
                     especiais.
                     15 anos de história e amor em cada fatia.</p>
                 <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Gostaria%20de%20pedir%20um%20orçamento%20gratuito."
-                    class="btn-whatsapp">
+                    class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                     <i class="ph-fill ph-whatsapp-logo"></i> Pedir Orçamento Grátis Agora
                 </a>
             </div>
@@ -124,7 +128,7 @@
                             celebrações em momentos inesquecíveis com criações únicas. A paixão artesanal e o frescor em
                             cada detalhe fazem a diferença</p>
                         <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20um%20orçamento%20para%20bolo%20doce%20personalizado."
-                            class="btn-whatsapp">
+                            class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                             Quero meu bolo personalizado <i class="ph ph-arrow-right"></i>
                         </a>
                     </div>
@@ -148,7 +152,7 @@
                             garantindo a você sabores autênticos e uma qualidade excepcional a cada mordida. Para
                             aniversários, casamentos e celebrações únicas.</p>
                         <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20um%20orçamento%20para%20doces%20e%20salgados%20para%20festa."
-                            class="btn-whatsapp">
+                            class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                             Quero doces personalizados <i class="ph ph-arrow-right"></i>
                         </a>
                     </div>
@@ -173,7 +177,7 @@
                             artesanal. A escolha perfeita para encantar seus convidados em eventos, casamentos e festas
                             sofisticadas.</p>
                         <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Quero%20um%20orçamento%20para%20bolo%20salgado%20personalizado."
-                            class="btn-whatsapp">
+                            class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                             Quero meus salgados <i class="ph ph-arrow-right"></i>
                         </a>
                     </div>
@@ -243,7 +247,8 @@
         <!-- 6. Sobre -->
         <section class="about">
             <div class="about-img">
-                <img src="mari.png" alt="Mari - Criadora e Confeiteira da Mari Quitutes">
+                <img src="mari.png" alt="Mari - Criadora e Confeiteira da Mari Quitutes" loading="lazy"
+                    decoding="async">
             </div>
             <div class="about-text">
                 <h2>Feito com Carinho, Entregue com Amor</h2>
@@ -254,7 +259,7 @@
                     Estamos
                     localizados na Vila Dalva e somos especialistas em entregar sabor e confiança.</p><br>
                 <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Gostaria%20de%20saber%20mais%20sobre%20o%20trabalho%20de%20vocês."
-                    class="btn-whatsapp">
+                    class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                     Converse com a Mari <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
@@ -328,7 +333,8 @@
             <h2>Pronta para Adoçar Sua Festa?</h2>
             <p>Solicite seu orçamento gratuito agora pelo WhatsApp. Respondemos em minutos!</p>
             <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Estou%20pronta(o)%20para%20fazer%20meu%20pedido.%20Como%20funciona?"
-                class="btn-whatsapp" style="font-size: 1.2rem; padding: 18px 40px;">
+                class="btn-whatsapp" style="font-size: 1.2rem; padding: 18px 40px;" target="_blank"
+                rel="noopener noreferrer">
                 <i class="ph-fill ph-whatsapp-logo" style="font-size: 1.5rem;"></i> Falar com a Mari no WhatsApp
             </a>
         </section>
@@ -355,7 +361,8 @@
                     </a>
                 </div>
                 <div class="location-img gallery-circle">
-                    <img src="place/loja.jpeg" alt="Fachada da loja física Mari Quitutes localizada em São Paulo">
+                    <img src="loja.jpg" alt="Fachada da loja física Mari Quitutes localizada em São Paulo"
+                        loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -364,13 +371,14 @@
     <!-- 9. Rodapé -->
     <footer class="footer">
         <div class="footer-content">
-            <img src="logo.png" alt="Mari Quitutes Logo" class="footer-logo">
+            <img src="logo.png" alt="Mari Quitutes Logo" class="footer-logo" loading="lazy" decoding="async">
             <p>R. José do Patrocínio Waetge, 62 — Vila Dalva, São Paulo - SP</p>
             <p>Telefone: <a href="tel:+5511995357319">(11) 99535-7319</a></p>
             <div class="social-links">
                 <a href="https://www.instagram.com/mariquitutes/" target="_blank" rel="noopener noreferrer"><i
                         class="ph-fill ph-instagram-logo"></i> @mariquitutes</a>
-                <a href="https://www.facebook.com/mariquitutesonline/" target="_blank" rel="noopener noreferrer" style="margin-left: 10px;"><i class="ph-fill ph-facebook-logo"></i> mariquitutesonline</a>
+                <a href="https://www.facebook.com/mariquitutesonline/" target="_blank" rel="noopener noreferrer"
+                    style="margin-left: 10px;"><i class="ph-fill ph-facebook-logo"></i> mariquitutesonline</a>
             </div>
         </div>
         <div class="copyright">
@@ -380,12 +388,12 @@
 
     <!-- Botão Fixo Mobile -->
     <a href="https://wa.me/5511995357319?text=Olá%20Mari!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
-        class="floating-whatsapp" aria-label="Falar no WhatsApp">
+        class="floating-whatsapp" aria-label="Falar no WhatsApp" target="_blank" rel="noopener noreferrer">
         <i class="ph-fill ph-whatsapp-logo"></i>
     </a>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 
 </html>

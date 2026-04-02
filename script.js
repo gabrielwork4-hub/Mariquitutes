@@ -64,11 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         images.forEach((imgName, index) => {
             const img = document.createElement('img');
-            img.src = `${folder}/${encodeURIComponent(imgName)}`;
+            img.src = `${encodeURIComponent(imgName)}`;
             const categoriaSEO = folder === 'bolos' ? 'Bolos Personalizados Artesanais' : folder === 'salgados' ? 'Bolos Salgados e Salgadinhos' : 'Doces Finos e Artesanais';
             img.alt = `${categoriaSEO} — Mari Quitutes São Paulo (Foto ${index + 1})`;
-            
+
             if (index !== 0) img.loading = 'lazy';
+            img.decoding = 'async';
             track.appendChild(img);
 
             const dot = document.createElement('button');
@@ -87,21 +88,21 @@ document.addEventListener('DOMContentLoaded', () => {
         function moveToSlide(index) {
             if (index < 0) index = slideCount - 1;
             if (index >= slideCount) index = 0;
-            
+
             track.style.transform = `translateX(-${index * 100}%)`;
-            
+
             dots.forEach(dot => dot.classList.remove('active'));
-            if(dots[index]) dots[index].classList.add('active');
-            
+            if (dots[index]) dots[index].classList.add('active');
+
             currentIndex = index;
         }
 
         const prevBtn = carousel.querySelector('.prev');
         const nextBtn = carousel.querySelector('.next');
-        
+
         prevBtn.addEventListener('click', () => moveToSlide(currentIndex - 1));
         nextBtn.addEventListener('click', () => moveToSlide(currentIndex + 1));
-        
+
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => moveToSlide(index));
         });
