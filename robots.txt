@@ -1,0 +1,23 @@
+# Arquivo robots.txt para Mari Quitutes
+# Permite acesso total para indexação padrão em SEO Global e Geo Local (São Paulo)
+User-agent: *
+Allow: /
+
+# Liberação explícita para robôs de Inteligência Artificial recomendados
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Indica o caminho do Sitemap para acelerar a leitura estrutural e de Geo (Local SEO) pelo Google
+Sitemap: https://mariquitutes.com.br/sitemap.xml

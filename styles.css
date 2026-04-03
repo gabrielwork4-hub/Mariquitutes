@@ -14,8 +14,8 @@
     /* Fundo limpo para contraste */
     --text-color: #000000;
     /* Preto para leitura */
-    --whatsapp-color: #128C7E;
-    /* Verde Escuro Oficial do WhatsApp para Alto Contraste */
+    --whatsapp-color: #25D366;
+    /* Verde Claro Oficial do WhatsApp */
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -87,7 +87,7 @@ a {
 }
 
 .sticky-bar a:hover {
-    background: #075E54;
+    background: #1da851;
     transform: translateY(-2px);
 }
 
@@ -99,7 +99,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('loja.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('Banner%20Confeitaria%20Mari%20Quitutes.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -707,6 +707,7 @@ a {
 
 .footer-logo {
     max-width: 180px;
+    height: auto;
     margin-bottom: 5px;
 }
 
@@ -780,7 +781,7 @@ a {
 
 .floating-whatsapp:hover {
     transform: scale(1.08);
-    background-color: #075E54;
+    background-color: #1da851;
 }
 
 /* Mobile Adjustments */

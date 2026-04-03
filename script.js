@@ -31,26 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
             "Imagem do WhatsApp de 2024-11-01 à(s) 17.36.44_57f8d39a.jpg",
             "Imagem do WhatsApp de 2024-11-01 à(s) 17.36.46_65068fe3.jpg",
             "Imagem do WhatsApp de 2024-11-01 à(s) 17.36.48_6246192e.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.36.51_bcb8d212.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.36.54_313c33f4.jpg",
             "Imagem do WhatsApp de 2024-11-01 à(s) 17.37.00_484fb58e.jpg",
             "Imagem do WhatsApp de 2024-11-01 à(s) 17.37.00_7c067f82.jpg",
             "Imagem do WhatsApp de 2024-11-01 à(s) 17.37.06_e0ad9292.jpg",
             "Imagem do WhatsApp de 2024-11-01 à(s) 17.37.09_2c7863d6.jpg"
         ],
         'doces': [
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.35_96a24505.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.36_16e5298b.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.36_1bb10d25.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.37_d50d5964.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.37_ed2f0344.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.41_fd234144.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.44_9de00ada.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.45_5ade7bcd.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.46_779ca033.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.47_04dd09e0.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.51_3d79b98b.jpg",
-            "Imagem do WhatsApp de 2024-11-01 à(s) 17.41.52_a4d70012.jpg"
+            "brigadeiros-tradicionais-morango-e-chocolate.webp",
+            "docinho-de-leite-ninho-receita-nutritiva.webp",
+            "docinho-de-leite-ninho.webp",
+            "docinhos-cajuzinhos-e-beijinhos.webp",
+            "docinhos-festa-coloridos-variados.webp",
+            "docinhos-variados-bichos-de-pé-cajuzinho-beijinho.webp",
+            "variedade-de-brigadeiros-tradicionais-comestiveis-de-colher.webp"
         ]
     };
 
@@ -65,8 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
         images.forEach((imgName, index) => {
             const img = document.createElement('img');
             img.src = `${encodeURIComponent(imgName)}`;
-            const categoriaSEO = folder === 'bolos' ? 'Bolos Personalizados Artesanais' : folder === 'salgados' ? 'Bolos Salgados e Salgadinhos' : 'Doces Finos e Artesanais';
-            img.alt = `${categoriaSEO} — Mari Quitutes São Paulo (Foto ${index + 1})`;
+            
+            let altText = "";
+            if (imgName.includes("WhatsApp")) {
+                const categoriaSEO = folder === 'bolos' ? 'Bolos Personalizados Artesanais' : folder === 'salgados' ? 'Bolos Salgados e Salgadinhos' : 'Doces Finos e Artesanais';
+                altText = `${categoriaSEO} — Mari Quitutes São Paulo (Foto ${index + 1})`;
+            } else {
+                let friendlyName = decodeURIComponent(imgName).replace('.webp.webp', '').replace('.webp', '').replace('.jpg', '').split('-').join(' ');
+                friendlyName = friendlyName.charAt(0).toUpperCase() + friendlyName.slice(1);
+                altText = `${friendlyName} — Mari Quitutes São Paulo`;
+            }
+            img.alt = altText;
 
             if (index !== 0) img.loading = 'lazy';
             img.decoding = 'async';
