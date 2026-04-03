@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
         images.forEach((imgName, index) => {
             const img = document.createElement('img');
             img.src = `${encodeURIComponent(actualPath)}/${encodeURIComponent(imgName)}`;
+            img.width = 372;
+            img.height = 496;
             
             let altText = "";
             if (imgName.includes("WhatsApp")) {
