@@ -57,9 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const dotsContainer = carousel.querySelector('.carousel-dots');
         const images = imageLists[folder] || [];
 
+        // Mapeamento dos data-folders para as pastas reais do disco
+        const folderMapping = {
+            'bolos': 'Bolos Confeitados',
+            'doces': 'Docinhos Personalizados',
+            'salgados': 'Salgados'
+        };
+        const actualPath = folderMapping[folder] || folder;
+
         images.forEach((imgName, index) => {
             const img = document.createElement('img');
-            img.src = `${encodeURIComponent(imgName)}`;
+            img.src = `${encodeURIComponent(actualPath)}/${encodeURIComponent(imgName)}`;
             
             let altText = "";
             if (imgName.includes("WhatsApp")) {
