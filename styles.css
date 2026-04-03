@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Previne Cumulative Layout Shift (CLS) de web-icons (Phosphor) */
+i[class^="ph"] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
 :root {
     --primary-color: #FBCCD0;
     /* Rosa mais claro a pedido do cliente */
@@ -99,7 +106,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('Banner%20Confeitaria%20Mari%20Quitutes.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('banner-otimizado.webp');
     background-size: cover;
     background-position: center;
     color: white;
@@ -391,8 +398,8 @@ a {
 }
 
 .stars {
-    color: #FFC107;
-    /* Amarelo/Dourado estilo Google */
+    color: #DB9D00;
+    /* Dourado escurecido para Acessibilidade AAA+ em fundo claro no Lighthouse */
     margin-bottom: 18px;
     font-size: 1.2rem;
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
