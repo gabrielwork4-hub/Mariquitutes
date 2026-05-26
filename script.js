@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
             "torta-aniversario-infantil-tema-de-aviao-ursinho-1-mes.webp"
         ],
         'salgados': [
-            "efiha-de-escarola-em-preparacao.webp",
+            "esfiha-de-escarola-em-preparacao.webp",
             "empadas-de-frango-com-catupiry.webp",
             "esfiha-de-carne-caseira.webp",
             "esfiha-de-escarola-caseira.webp",
             "esfiha-de-frango-caseira.webp",
             "risoles-de-presunto-e-queijo.webp",
-            "salgadinhos-de-festa-varios-tipos-emcaixas-para-venda.webpsalgadinhos-de-festa-varios-tipos-em-caixas-para-venda.webp"
+            "salgadinhos-de-festa-varios-tipos-em-caixas-para-venda.webp"
         ],
         'doces': [
             "brigadeiros-e-bixos-de-pe.webp",
